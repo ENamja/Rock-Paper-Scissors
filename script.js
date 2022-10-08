@@ -1,9 +1,7 @@
-function getRandomInt() {
-    pass;
-}
-
 function getComputerChoice() {
-    pass;
+    moves = ['rock', 'paper', 'scissors'];
+    num = Math.floor(Math.random() * 3);
+    return moves[num];
 }
 
 function getPlayerChoice() {
@@ -17,3 +15,5 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
     pass;
 }
+
+console.log(getRandomMove());
