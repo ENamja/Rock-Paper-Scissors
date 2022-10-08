@@ -1,11 +1,17 @@
+moves = ['rock', 'paper', 'scissors'];
+
 function getComputerChoice() {
-    moves = ['rock', 'paper', 'scissors'];
     num = Math.floor(Math.random() * 3);
     return moves[num];
 }
 
 function getPlayerChoice() {
-    pass;
+    while (true) {
+        move = prompt('Please enter rock, paper, or scissors: ').toLowerCase();
+        if (moves.includes(move)) {
+            return move;
+        }
+    }
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -15,5 +21,3 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
     pass;
 }
-
-console.log(getRandomMove());
