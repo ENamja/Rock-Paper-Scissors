@@ -1,1 +1,1 @@
-Basic rock paper scissors game against the computer using javascript.
+Basic rock paper scissors game against the computer using javascript. Played in the console.
