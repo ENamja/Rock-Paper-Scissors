@@ -47,9 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const buttons = document.querySelectorAll("button");
+    const div = document.querySelector("div");
 
     function logText(e) {
-        console.log(e.target.textContent);
+        div.textContent = e.target.textContent;
     }
 
     buttons.forEach(button => button.addEventListener("click", logText));
