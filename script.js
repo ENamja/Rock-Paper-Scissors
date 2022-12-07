@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const computer = document.querySelector("div.cScore");
     let pScore = 0;
     let cScore = 0;
+    let results = document.createElement("div");
+    results.classList.add("results");
+    results.classList.add("centered");
 
     moves = ["rock", "paper", "scissors"];
 
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function playRound(e) { // Plays a singe round of rock-paper-scissors
-        let pChoice = e.target.textContent;
+        let pChoice = e.target.dataset.choice;
         let cChoice = _getComputerChoice();
         let display;
 
@@ -84,15 +87,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (gameHasEnded()) { // need another if statement bc score is incremented in playRound function
-            let results = document.createElement("div");
-            results.classList.add("results");
             document.body.appendChild(results);
             if (pScore == 5) {
-                results.textContent = "Player Win";
+                results.textContent = "Player Win!";
             }
             else {
-                results.textContent = "Computer Win";
+                results.textContent = "Computer Win!";
             }
+
+            buttons.forEach(button => button.removeEventListener("click", playGame));
         }
     }
 
